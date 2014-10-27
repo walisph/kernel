@@ -1,0 +1,25 @@
+{
+    "name": "walisph/kernel",
+    "description": "Kernel of Walis Apps",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Walis Philippines",
+            "email": "info@walis.com.ph"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "illuminate/html": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Walisph\\Kernel": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}
