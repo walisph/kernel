@@ -26,15 +26,10 @@ if ( ! function_exists( 'minified' ) )
      */
     function minified()
     {
-        if( ! getenv('minified') )
-        {
-            return 'min.';
-        }
-        if( ! app()->make('config')->get('app.debug') )
-        {
-            return 'min.';
-        }
-        if( ! app()->make('env') === 'local' )
+        if( ! app()->make('config')->get('app.debug') ||
+            ! getenv('minified') ||
+            ! app()->make('env') === 'local'
+          )
         {
             return 'min.';
         }
